@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bigiotteria - Negozio</title>
+  <link rel="stylesheet" href="stile/style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Bigiotteria</h1>
+    <a href="index.html" class="btn-nav">← Torna al menu</a>
+  </header>
+
+  <!-- Menu sottocategorie -->
+  <nav id="sottomenù-bigiotteria">
+    <button onclick="mostraSottocategoria('Bracciali')">Bracciali</button>
+    <button onclick="mostraSottocategoria('Orecchini')">Orecchini</button>
+    <button onclick="mostraSottocategoria('Collane')">Collane</button>
+    <button onclick="mostraSottocategoria('Cavigliere')">Cavigliere</button>
+    <button onclick="mostraSottocategoria('OrecchiniAnallergici')">Orecchini Anallergici</button>
+  </nav>
+
+  <!-- Sottocategorie -->
+  <section id="Bracciali" class="sottocategoria" style="display:none;">
+    <h2>Bracciali</h2>
+    <div class="lista-prodotti" id="prodotti-Bracciali"></div>
+  </section>
+
+  <section id="Orecchini" class="sottocategoria" style="display:none;">
+    <h2>Orecchini</h2>
+    <div class="lista-prodotti" id="prodotti-Orecchini"></div>
+  </section>
+
+  <section id="Collane" class="sottocategoria" style="display:none;">
+    <h2>Collane</h2>
+    <div class="lista-prodotti" id="prodotti-Collane"></div>
+  </section>
+
+  <section id="Cavigliere" class="sottocategoria" style="display:none;">
+    <h2>Cavigliere</h2>
+    <div class="lista-prodotti" id="prodotti-Cavigliere"></div>
+  </section>
+
+  <section id="OrecchiniAnallergici" class="sottocategoria" style="display:none;">
+    <h2>Orecchini Anallergici</h2>
+    <div class="lista-prodotti" id="prodotti-OrecchiniAnallergici"></div>
+  </section>
+
+  <!-- Carrello -->
+  <hr>
+  <section class="carrello-section">
+    <h2>🛒 Carrello</h2>
+    <ul id="carrello"></ul>
+    <div class="carrello-footer">
+      <p>Totale: <span id="totale">0.00</span> €</p>
+      <div class="carrello-buttons">
+        <button class="btn-carrello btn-svuota" onclick="svuotaCarrello()">Svuota carrello</button>
+        <button class="btn-carrello btn-ordina" onclick="inviaOrdine()">📱 Invia Ordine su WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
